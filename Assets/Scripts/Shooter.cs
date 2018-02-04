@@ -14,7 +14,8 @@ public class Shooter : MonoBehaviour {
 
             var obj = Pool.GetObject(); //Instantiate(Prefab);
             obj.GetComponent<Projectile>().Pool = Pool;
-            obj.transform.position = transform.position;
+            //obj.transform.position = transform.position;
+
 
         }
     }
