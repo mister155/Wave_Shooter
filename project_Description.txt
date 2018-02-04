@@ -1,0 +1,11 @@
+Team members: Marcin Œlêzak
+
+The project I chose is creating a simple 2D top-down shooter game, in which the character will fight enemies in waves. The enemies will be in three types, normal, slow tanks and fast, but easy killable and for killing them player receives points.
+
+Things to include:
+ - A map with certain areas that player cannot walk and shoot through
+ - Player character with a certain amount of health points
+ - Enemies in three types, normal, fast and tanky, varying in speed, health points and points given
+ - Shooting system containing three types of weapons, a pistol, a machine gun and a shotgun, each differing in shooting speed and damage dealt
+ - A points system letting player get points for defeated enemies
+ - Wave system, making each wave harder to defeat as it consists of more of enemies and stronger types at certain points
