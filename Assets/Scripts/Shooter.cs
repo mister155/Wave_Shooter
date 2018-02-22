@@ -15,7 +15,7 @@ public class Shooter : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
         {
 
- //           var obj = Pool.GetObject(); 
+ //           var obj = Pool.GetObject();
               Instantiate(Prefab);
   //          obj.GetComponent<Projectile>().Pool = Pool;
               

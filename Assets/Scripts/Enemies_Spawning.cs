@@ -21,6 +21,9 @@ public class Enemies_Spawning : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (GameObject.FindWithTag("Player") == null)
+        {
+            Destroy(this);
+        }
+    }
 }
