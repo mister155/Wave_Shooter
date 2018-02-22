@@ -14,8 +14,5 @@ public class Mouse_Aim : MonoBehaviour {
         Cursor.SetCursor(crosshairTexture, hotSpot, cursorMode);
     }
 
-    void OnMouseExit()
-    {
-        Cursor.SetCursor(null, Vector2.zero, cursorMode);
-    }
+
 }
