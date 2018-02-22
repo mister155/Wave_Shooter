@@ -13,15 +13,6 @@ public class Player_Death : MonoBehaviour {
 
 	void Start()
     {
-        var coll = new List<int> { 1, 2, 3 };
-        foreach(var col in coll)
-        {
-            coll.Add(1);
-        }
-        if (true)
-        {
-            var test = true;
-        }
         movement = GetComponent<Player_Movement>();
         shoot = GetComponent<Shooter>();
     }
