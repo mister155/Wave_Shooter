@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Zombie_Damage : MonoBehaviour {
 
-    public int healthPoints = 5; 
 	// Use this for initialization
 	void Start () {
 		
