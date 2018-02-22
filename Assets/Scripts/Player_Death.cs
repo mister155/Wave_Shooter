@@ -15,6 +15,7 @@ public class Player_Death : MonoBehaviour {
     {
         movement = GetComponent<Player_Movement>();
         shoot = GetComponent<Shooter>();
+        Blood.enabled = false;
     }
 	
 
@@ -33,13 +34,14 @@ public class Player_Death : MonoBehaviour {
     void Death()
     {
         isDead = true;
-
+        
         movement.enabled = false;
         shoot.enabled = false;
 
 
         Destroy(gameObject);
-        Blood.SetActive(true);
+        Blood.transform.position = transform.position;
+        Blood.enabled = true;
 
 
         GameObject[] gameObjectArray = GameObject.FindGameObjectsWithTag("Zombie");
