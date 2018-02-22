@@ -13,11 +13,6 @@ public class Player_Death : MonoBehaviour {
 
 	void Start()
     {
-        var anothercoll = new Dictionary<string, string> { {"string", "string"} };
-        foreach(var anothercol in anothercoll)
-        {
-            var test = true;
-        }
         movement = GetComponent<Player_Movement>();
         shoot = GetComponent<Shooter>();
     }
