@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Zombie_Damage : MonoBehaviour {
 
+    public float healthPoints = 5.0f;
+    public float Life = 3.0f;
+    public GameObject Blood;
+    public GameObject Zombie;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -11,6 +16,32 @@ public class Zombie_Damage : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+        Blood.transform.position = Zombie.transform.position;
+
+    }
+
+    void OnCollisionEnter2D()
+    {
+
+        if (healthPoints <= 0)
+        {
+            gameObject.SetActive(false);
+            Instantiate(Blood);
+        }
+        else
+        {
+            healthPoints -= 1.0f;
+        }
+    }
+
+    //void Bleeding()
+    //{
+    //    Instantiate(Blood);
+    //    Life -= Time.deltaTime;
+    //    if (Life < 0.0f)
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //}
 }

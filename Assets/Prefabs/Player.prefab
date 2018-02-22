@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1562346738280488}
-  Blood: {fileID: 0}
+  Blood: {fileID: 1596768185030932, guid: 2e18453b502348840808125a5cbd6277, type: 2}
 --- !u!114 &114793077191926930
 MonoBehaviour:
   m_ObjectHideFlags: 1

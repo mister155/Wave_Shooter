@@ -15,12 +15,13 @@ public class Player_Death : MonoBehaviour {
     {
         movement = GetComponent<Player_Movement>();
         shoot = GetComponent<Shooter>();
+        
     }
 	
 
 	void Update () {
-		
-	}
+        Blood.transform.position = transform.position;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -39,7 +40,10 @@ public class Player_Death : MonoBehaviour {
 
 
         Destroy(gameObject);
-        Blood.SetActive(true);
+
+        Instantiate(Blood);
+
+        
 
 
         GameObject[] gameObjectArray = GameObject.FindGameObjectsWithTag("Zombie");
