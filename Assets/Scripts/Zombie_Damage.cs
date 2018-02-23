@@ -6,7 +6,12 @@ public class Zombie_Damage : MonoBehaviour {
 
     public float healthPoints = 5.0f;
     public GameObject Blood;
+    public Player_Death player_Death;
 
+    private void Start()
+    {
+       player_Death = GetComponent<Player_Death>();
+    }
     void OnCollisionEnter2D()
     {
 
@@ -14,6 +19,7 @@ public class Zombie_Damage : MonoBehaviour {
         {
             gameObject.SetActive(false);
             Bleeding();
+            player_Death.kills++;
         }
         else
         {
