@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour {
- //   public ObjectPool Pool;
+
     public float Life = 0.3f;
     public GameObject bullet;
     public float Speed = 10.0f;
-
+ 
     void Update () {
 
         Life -= Time.deltaTime;
@@ -19,7 +19,7 @@ public class Projectile : MonoBehaviour {
 
         if (Life <0.0f)
         {
-           // Pool.ReleaseObject(gameObject);
+
             Destroy(gameObject);
         }
 

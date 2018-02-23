@@ -80,10 +80,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Blood.cs" />
     <Compile Include="Assets\Scripts\Enemies_Spawning.cs" />
-    <Compile Include="Assets\Scripts\Menu\MenuButtons.cs" />
+    <Compile Include="Assets\Scripts\MenuButtons.cs" />
     <Compile Include="Assets\Scripts\Mouse_Aim.cs" />
-    <Compile Include="Assets\Scripts\NumberOfKilled.cs" />
-    <Compile Include="Assets\Scripts\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\Player_Death.cs" />
     <Compile Include="Assets\Scripts\Player_Movement.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
