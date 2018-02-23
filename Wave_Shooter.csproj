@@ -78,6 +78,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Blood.cs" />
     <Compile Include="Assets\Scripts\Enemies_Spawning.cs" />
     <Compile Include="Assets\Scripts\Mouse_Aim.cs" />
     <Compile Include="Assets\Scripts\ObjectPool.cs" />

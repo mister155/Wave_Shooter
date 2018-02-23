@@ -6,22 +6,15 @@ public class Zombie_Behavior : MonoBehaviour {
 
 
     private Transform Target;
-    public float Speed = 2.0f;
+    private float _Speed = 2.0f;
 
-
-
-
-    // Use this for initialization
     void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        _Speed = Random.Range(1.0f, 5.0f);
+    }
 
+	void Update () {
          Target = GameObject.FindWithTag("Player").transform;
          transform.right = Target.position - transform.position;
-         transform.position += transform.right * Speed * Time.deltaTime;
-
+         transform.position += transform.right * _Speed * Time.deltaTime;
     }
 }

@@ -5,21 +5,7 @@ using UnityEngine;
 public class Zombie_Damage : MonoBehaviour {
 
     public float healthPoints = 5.0f;
-    public float Life = 3.0f;
     public GameObject Blood;
-    public GameObject Zombie;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
-        Blood.transform.position = transform.position;
-
-    }
 
     void OnCollisionEnter2D()
     {
@@ -37,11 +23,9 @@ public class Zombie_Damage : MonoBehaviour {
 
     void Bleeding()
     {
+        Blood.transform.position = transform.position;
+        Blood.transform.rotation = transform.rotation;
         Instantiate(Blood);
-        Life -= Time.deltaTime;
-        if (Life < 0.0f)
-        {
-            Destroy(gameObject);
-        }
+
     }
 }

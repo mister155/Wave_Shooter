@@ -6,8 +6,6 @@ public class Shooter : MonoBehaviour {
 //    public ObjectPool Pool;
     public GameObject Prefab;
 
-
-
     void Update()
     {
         Prefab.transform.position = transform.position;

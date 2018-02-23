@@ -8,8 +8,6 @@ public class Projectile : MonoBehaviour {
     public GameObject bullet;
     public float Speed = 10.0f;
 
-
-    // Update is called once per frame
     void Update () {
 
         Life -= Time.deltaTime;

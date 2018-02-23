@@ -5,12 +5,7 @@ using UnityEngine;
 public class Player_Movement : MonoBehaviour {
 
     float speed = 3.0f;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		if (Input.GetKey(KeyCode.A))
         {

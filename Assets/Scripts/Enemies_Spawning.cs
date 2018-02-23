@@ -8,18 +8,18 @@ public class Enemies_Spawning : MonoBehaviour {
     public Transform[] spawnPoints;
     public float spawnTime = 3f;
 
-	// Use this for initialization
 	void Start () {
-        InvokeRepeating("Spawn", spawnTime, spawnTime);
+        Invoke("Spawn", spawnTime);
 	}
 	
     void Spawn()
     {
+        float randomTime = Random.Range(0.5f, 3.0f);
         int spawnPointIndex = Random.Range(0, spawnPoints.Length);
         Instantiate(Enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
-
+        Invoke("Spawn", randomTime);
     }
-	// Update is called once per frame
+
 	void Update () {
         if (GameObject.FindWithTag("Player") == null)
         {
