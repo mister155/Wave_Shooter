@@ -17,7 +17,7 @@ public class Zombie_Damage : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        Blood.transform.position = Zombie.transform.position;
+        Blood.transform.position = transform.position;
 
     }
 
@@ -27,7 +27,7 @@ public class Zombie_Damage : MonoBehaviour {
         if (healthPoints <= 0)
         {
             gameObject.SetActive(false);
-            Instantiate(Blood);
+            Bleeding();
         }
         else
         {
@@ -35,13 +35,13 @@ public class Zombie_Damage : MonoBehaviour {
         }
     }
 
-    //void Bleeding()
-    //{
-    //    Instantiate(Blood);
-    //    Life -= Time.deltaTime;
-    //    if (Life < 0.0f)
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //}
+    void Bleeding()
+    {
+        Instantiate(Blood);
+        Life -= Time.deltaTime;
+        if (Life < 0.0f)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
