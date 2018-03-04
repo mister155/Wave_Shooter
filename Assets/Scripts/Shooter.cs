@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shooter : MonoBehaviour {
 //    public ObjectPool Pool;
     public GameObject Prefab;
+    public AudioSource sound;
 
     void Update()
     {
@@ -12,12 +13,8 @@ public class Shooter : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
-
- //           var obj = Pool.GetObject();
+            sound.Play();
               Instantiate(Prefab);
-  //          obj.GetComponent<Projectile>().Pool = Pool;
-              
-
 
         }
     }

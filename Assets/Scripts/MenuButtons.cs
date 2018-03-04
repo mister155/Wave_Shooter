@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MenuButtons : MonoBehaviour {
+    public AudioSource sound;
+
+    public void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     public void PlayPlot()
     {
@@ -22,5 +28,11 @@ public class MenuButtons : MonoBehaviour {
         Application.Quit ();
 #endif
     }
+    public void ButtonSound(AudioClip clip)
+    {
+        sound.clip = clip;
+        sound.Play();
+    }
+
 
 }
