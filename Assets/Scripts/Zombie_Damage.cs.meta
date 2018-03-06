@@ -1,10 +1,14 @@
 fileFormatVersion: 2
 guid: cd6a20902cf498645864987ab27f3c6b
-timeCreated: 1519337620
+timeCreated: 1520374142
 licenseType: Free
 MonoImporter:
+  externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Blood: {instanceID: 0}
+  - deathSound: {fileID: 82498633201508648, guid: e1a584dfecf2a48468a659009a680de3,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

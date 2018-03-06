@@ -5,27 +5,37 @@ using UnityEngine;
 public class Player_Movement : MonoBehaviour {
 
     float speed = 3.0f;
+    public AudioSource footsteps;
 
 
-	void Update () {
+
+    void Update () {
 		if (Input.GetKey(KeyCode.A))
         {
             transform.position += Vector3.left * speed * Time.deltaTime;
+            footsteps.UnPause();
+        }
+        else
+        {
+            footsteps.Pause();
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
+            footsteps.UnPause();
         }
 
         if (Input.GetKey(KeyCode.W))
         {
             transform.position += Vector3.up * speed * Time.deltaTime;
+            footsteps.UnPause();
         }
 
         if (Input.GetKey(KeyCode.S))
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
+            footsteps.UnPause();
         }
 
         if (Input.GetKey(KeyCode.Escape))

@@ -5,8 +5,14 @@ using UnityEngine;
 public class Blood : MonoBehaviour {
 
     public float Life = 3.0f;
+    public AudioSource deathSound;
 
-	void FixedUpdate () {
+    private void Start()
+    {
+        deathSound.Play();
+    }
+    void FixedUpdate () {
+
         Life -= Time.deltaTime;
         if (Life < 0.0f)
         {
